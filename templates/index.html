@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+      <title>Home - Brilliant Scarcity</title>
+      <meta name="description" content="A page to be frugal - sharing attempts to cut costs.">
+      <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+      <link rel="stylesheet" href="assets/css/styles.min.css">
+      <link rel="stylesheet" href="assets/css/wff.css">
+      <link rel="shortcut icon" href="assets/favicon.ico">
+      <!-- Hotjar Tracking Code for www.juhasbazaar.com -->
+      <script>
+         (function(h,o,t,j,a,r){
+             h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+             h._hjSettings={hjid:2439362,hjsv:6};
+             a=o.getElementsByTagName('head')[0];
+             r=o.createElement('script');r.async=1;
+             r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+             a.appendChild(r);
+         })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+      </script>
+      <style>
+         select {
+  			width: 100%;
+  			padding:10px;
+  			border-radius:10px;
+			}
+      </style>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-8M87V4XPHF"></script>
+      <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+         
+         gtag('config', 'G-8M87V4XPHF');
+      </script>
+      <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+   </head>
+   <body>
+      <nav class="navbar navbar-light navbar-expand bg-light navigation-clean">
+         <div class="container">
+            <a class="navbar-brand" href="/">Manat Methods</a>
+            <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+               <a class="btn btn-primary ms-auto" role="button" href="/SignUp">Sign Up for Updates!</a>
+            </div>
+         </div>
+      </nav>
+      <header class="text-center text-white masthead" style="background: url(&quot;assets/img/arena.jpg&quot;);" margin-bottom: 15px>
+         <div class="overlay"></div>
+         <div class="container">
+            <div class="row">
+               <div class="col-xl-9 mx-auto position-relative">
+                  <h1 class="mb-5">Every game counts.</h1>
+               </div>
+               <div class="col-md-10 col-lg-8 col-xl-7 mx-auto position-relative">
+                  <form action="" method="POST">
+                     <br>
+                     <div align = "left">
+                        <label for="store_name">Choose a league:</label>
+                        <select name="store_name" id="store_name">
+                           <option value="NBA">National Basketball Association</option>
+                           <option value="WNBA">Women's National Basketball Association</option>
+                           <option value="MLB">Major League Baseball</option>
+                           <option value="NSL">Norwegian Soccer League</option>
+                           <option value="AAL">Australian Soccer League</option>
+                        </select>
+                     </div>
+                     <br>
+                     <div onsubmit="return false;" class="col-12 col-md-3"><button id="Login" class="btn btn-primary btn-lg" type="submit" onclick="showDiv()">Search!</button></div>
+                     <br>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </header>
+      <section padding: 5%;>
+      <div id="loader" style="display:none" align="center"> <br> <br> This may take a moment! Just hold on!</div>
+      <script>
+         function showDiv() {
+           document.getElementById('loader').style.display = "block";
+           setTimeout(function() {
+             document.getElementById('loader').style.display = "none";
+           },2000);
+            
+         }
+               
+      </script>
+      </section>
+      <section>
+         <div align = "center"> <br> {{ league | safe }} <br> {{ table | safe}} <br> <br> </div>
+      </section>
+      <!-- Start: Footer Basic -->
+      <footer class="footer-basic">
+         <!-- Start: Social Icons -->
+         <div class="social"></div>
+         <!-- End: Social Icons --><!-- Start: Links -->
+         <ul class="list-inline">
+            <li class="list-inline-item"><a href="/">Home</a></li>
+            <li class="list-inline-item"><a href="/SignUp">Sign Up for Updates</a></li>
+            <li class="list-inline-item"><a href="/FutureProjects">Suggest Future Projects</a></li>
+         </ul>
+         <!-- End: Links --><!-- Start: Copyright -->
+         <p class="copyright">ManatMethods © 2021</p>
+         <!-- End: Copyright -->
+         <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+      </footer>
+      <!-- End: Footer Basic --><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script><script src="assets/js/smart-forms.min.js"></script>
+   </body>
+</html>
