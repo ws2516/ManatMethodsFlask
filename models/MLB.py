@@ -101,6 +101,7 @@ def fetch():
   Result['Team'] = Result.ID.values
   Result['Probability'] = Result.Probabilities.values
   Result = Result[['Team','Probability','Odds','EV']]
+  print(Result)
   Bet = Result[Result.EV >1.00]
   kelly = [Kelly(Bet.Odds.values[i], Bet.Probability.values[i]) for i in range(len(Bet.Probability.values))]
   Betting = pd.DataFrame({'Bet State Chosen':Bet.Team.values, 'Kelly Criterion Suggestion': kelly, 'Payouts (per Dollar)':Bet.Odds.values})
