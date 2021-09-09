@@ -6,11 +6,31 @@ import models
 from models import NBA, MLB, WNBA, NSL, AAL
 
 def update_all():
-	update_with_df.write_to_sheet(NBA.run(),'NBA')
-	update_with_df.write_to_sheet(MLB.run(),'MLB')
-	update_with_df.write_to_sheet(WNBA.run(),'WNBA')
-	update_with_df.write_to_sheet(NSL.run(),'NSL')
-	update_with_df.write_to_sheet(AAL.run(),'AAL')
+	try:
+		update_with_df.write_to_sheet(NBA.run(),'NBA')
+	except:
+		continue
+	
+	try:
+		update_with_df.write_to_sheet(MLB.run(),'MLB')
+	except:
+		continue
+	
+	try:
+		update_with_df.write_to_sheet(WNBA.run(),'WNBA')
+	except:
+		continue
+	
+	try:
+		update_with_df.write_to_sheet(NSL.run(),'NSL')
+	except:
+		continue
+	
+	try:
+		update_with_df.write_to_sheet(AAL.run(),'AAL')
+	except:
+		continue
+	
 	return 'Done'
 
 print(update_all())
