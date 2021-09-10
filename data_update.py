@@ -9,27 +9,27 @@ def update_all():
 	try:
 		update_with_df.write_to_sheet(NBA.run(),'NBA')
 	except:
-		continue
+		pass
 	
 	try:
 		update_with_df.write_to_sheet(MLB.run(),'MLB')
 	except:
-		continue
+		pass
 	
 	try:
 		update_with_df.write_to_sheet(WNBA.run(),'WNBA')
 	except:
-		continue
+		pass
 	
 	try:
 		update_with_df.write_to_sheet(NSL.run(),'NSL')
 	except:
-		continue
+		pass
 	
 	try:
 		update_with_df.write_to_sheet(AAL.run(),'AAL')
 	except:
-		continue
+		pass
 	
 	return 'Done'
 
